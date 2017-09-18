@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
-/**
- * Generated class for the PerfilPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HistorialPage } from '../../pages/index.paginas';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,80 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PerfilPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private alertCtrl: AlertController) {
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad(titulo:string,) {
     console.log('ionViewDidLoad PerfilPage');
+  }
+
+  historial(){
+    this.navCtrl.push(HistorialPage);
+  }
+
+  alertaCambiarNombre() {
+    let alert = this.alertCtrl.create({
+      title: 'Cambiar Nombre',
+      inputs: [
+        {
+          name: 'nombre',
+          placeholder: 'Nombre'
+        },
+        {
+          name: 'apellido',
+          placeholder: 'Apellido'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Guardar',
+          handler: data => {
+            //PONER CODIGO DE GUARDADO
+
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+
+  alertaCambiar(titulo:string, name:string, placeholder:string) {
+    let alert = this.alertCtrl.create({
+      title: titulo,
+      inputs: [
+        {
+          name: name,
+          placeholder: placeholder
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Guardar',
+          handler: data => {
+            //PONER CODIGO DE GUARDADO
+
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }

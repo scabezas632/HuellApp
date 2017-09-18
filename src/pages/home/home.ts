@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { PerfilPage } from '../../pages/index.paginas';
+import { PerfilPage, ResultadosPage } from '../../pages/index.paginas';
 
 @Component({
   selector: 'page-home',
@@ -25,6 +25,11 @@ export class HomePage {
 
   comenzar(){
     this.isPlay = !this.isPlay;
+
+    if(!this.isPlay){
+      this.navCtrl.push(ResultadosPage);
+    }
+
   }
 
   settings(){

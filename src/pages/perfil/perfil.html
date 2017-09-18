@@ -12,19 +12,19 @@
   <ion-list>
 
       <ion-item-divider>Cuenta</ion-item-divider>
-      <ion-item>
+      <ion-item (click)="alertaCambiarNombre()">
         <ion-icon name="person" item-start></ion-icon>
         Cambiar Nombre
       </ion-item>
-      <ion-item>
+      <ion-item (click)="alertaCambiar('Cambiar Correo', 'email', 'E-mail')">
         <ion-icon name="mail" item-start></ion-icon>
         Cambiar Correo
       </ion-item>
-      <ion-item>
+      <ion-item (click)="alertaCambiar('Cambiar Contraseña', 'password', 'Password')">
         <ion-icon name="lock" item-start></ion-icon>
         Cambiar Contraseña
       </ion-item>
-      <ion-item>
+      <ion-item (click)="historial()">
         <ion-icon name="clipboard" item-start></ion-icon>
         Ver Historial de Emisiones
       </ion-item>

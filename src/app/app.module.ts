@@ -8,7 +8,9 @@ import { MyApp } from './app.component';
 import { CrearUsuarioPage,
          LoginPage,
          HomePage,
-         PerfilPage} from '../pages/index.paginas';
+         PerfilPage,
+         HistorialPage,
+         ResultadosPage} from '../pages/index.paginas';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CrearUsuarioPage,
     CrearUsuarioPage,
     LoginPage,
     HomePage,
-    PerfilPage
+    PerfilPage,
+    HistorialPage,
+    ResultadosPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,9 @@ import { CrearUsuarioPage,
     CrearUsuarioPage,
     LoginPage,
     HomePage,
-    PerfilPage
+    PerfilPage,
+    HistorialPage,
+    ResultadosPage
   ],
   providers: [
     StatusBar,
