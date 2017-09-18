@@ -10,11 +10,13 @@ import { CrearUsuarioPage, HomePage } from '../../pages/index.paginas';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+    
   }
 
   registro(){
