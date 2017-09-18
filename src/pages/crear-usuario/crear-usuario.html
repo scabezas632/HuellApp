@@ -1,0 +1,57 @@
+<!--
+  Generated template for the CrearUsuarioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Registrarse</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <img src="assets/img/logo.png">
+
+
+  <ion-card color="gray-light">
+    <ion-card-header>
+      O crea una cuenta HuellApp
+    </ion-card-header>
+    <ion-card-content>
+      <form>
+        <ion-list>
+
+          <div class="input-center">
+            <ion-item class="item-trns">
+              <ion-input placeholder="Username" type="text"></ion-input>
+            </ion-item>
+            <ion-item class="item-trns">
+              <ion-input placeholder="Password" type="password"></ion-input>
+            </ion-item>
+            <button ion-button small clear
+            color="dark" class="center">¿Olvidó su contraseña?</button>
+          </div>
+
+          <div class="button-padding">
+            <button ion-button round
+                    color="huellaap" class="button-center"
+                    (click)="login()">
+              Ingresar
+            </button>
+            <button ion-button small clear
+            color="dark" class="button-center" (click)="registro()">¿No tienes cuenta?</button>
+          </div>
+
+        </ion-list>
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
