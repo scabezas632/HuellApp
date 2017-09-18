@@ -9,60 +9,66 @@
 
 <ion-content padding>
 
-  <button ion-button
-          round
-          block
-          color="facebook">
-    Iniciar Sesión con Facebook
-  </button>
+  <div class="padding-top-first">
+    <button ion-button
+            round block
+            color="facebook">
+      Iniciar Sesión con Facebook
+    </button>
+  </div>
 
-  <button ion-button
-          round
-          block
-          color="gmail">
-    Iniciar Sesión con Gmail
-  </button>
+  <div class="padding-top">
+    <button ion-button
+            round block
+            color="gmail">
+      Iniciar Sesión con Gmail
+    </button>
+  </div>
 
-  <button ion-button
-          round
-          block
-          color="twitter">
-    Iniciar Sesión con Twitter
-  </button>
+  <div class="padding-top">
+    <button ion-button
+            round block
+            color="twitter">
+      Iniciar Sesión con Twitter
+    </button>
+  </div>
 
-  <ion-card color="gray-light">
-    <ion-card-header>
-      O inicia sesión con HuellApp
-    </ion-card-header>
-    <ion-card-content>
-      <form>
-        <ion-list>
 
-          <div class="input-center">
-            <ion-item class="item-trns">
-              <ion-input placeholder="Username" type="text"></ion-input>
-            </ion-item>
-            <ion-item class="item-trns">
-              <ion-input placeholder="Password" type="password"></ion-input>
-            </ion-item>
-            <button ion-button small clear
-            color="dark" class="center">¿Olvidó su contraseña?</button>
-          </div>
+  <div class="padding-top">
+    <ion-card color="gray-light">
+      <ion-card-header>
+        O inicia sesión con HuellApp
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+          <ion-list>
 
-          <div class="button-padding">
-            <button ion-button round
-                    color="huellaap" class="button-center"
-                    (click)="login()">
-              Ingresar
-            </button>
-            <button ion-button small clear
-            color="dark" class="button-center" (click)="registro()">¿No tienes cuenta?</button>
-          </div>
+            <div class="input-center">
+              <ion-item>
+                <ion-input placeholder="Username" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input placeholder="Password" type="password"></ion-input>
+              </ion-item>
+              <button ion-button small clear
+              color="dark" class="center">¿Olvidó su contraseña?</button>
+            </div>
 
-        </ion-list>
+            <div class="button-padding">
+              <button ion-button round
+                      color="huellaap" class="button-center"
+                      (click)="login()">
+                Ingresar
+              </button>
+              <button ion-button small clear
+              color="dark" class="button-center" (click)="registro()">¿No tienes cuenta?</button>
+            </div>
 
-      </form>
-    </ion-card-content>
-  </ion-card>
+          </ion-list>
+
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
 </ion-content>

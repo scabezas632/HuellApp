@@ -6,10 +6,24 @@ page-crear-usuario {
     width: 100%;
   }
 
+  .center{
+    display: block;
+    margin: auto;
+  }
+
   button.button-center{
     display: block;
     margin: auto;
     width: 100%;
+  }
+
+  div.button-padding{
+    padding-top: 5%;
+  }
+
+  img.center{
+    display: block;
+    margin: auto;
   }
 
 }

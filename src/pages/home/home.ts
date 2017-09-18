@@ -10,9 +10,17 @@ import { PerfilPage } from '../../pages/index.paginas';
 export class HomePage {
 
   isPlay:boolean = false;
+  vehiculo: string = 'auto';
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  onSegmentSelected(valor:string) {
+    if(this.vehiculo!=valor){
+      this.vehiculo = valor;
+      console.log(this.vehiculo)
+    }
   }
 
   comenzar(){

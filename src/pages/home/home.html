@@ -36,50 +36,34 @@
 <ion-footer>
   <ion-toolbar>
 
-    <ion-grid>
-      <ion-row>
+        <ion-segment [(ngModel)]="vehiculo" color="secondary-dark">
 
-        <ion-list radio-group [(ngModel)]="choose" class="horizontal">
+          <ion-segment-button value="bici"
+                              (ionSelect)="onSegmentSelected('bici')">
+            <ion-icon name="bicycle"></ion-icon>
+          </ion-segment-button>
 
-          <ion-col>
-            <ion-item>
-              <ion-icon name="bicycle" item-start></ion-icon>
-              <ion-radio value="bici"></ion-radio>
-            </ion-item>
-          </ion-col>
+          <ion-segment-button value="auto"
+                              (ionSelect)="onSegmentSelected('auto')">
+            <ion-icon name="car"></ion-icon>
+          </ion-segment-button>
 
-          <ion-col>
-            <ion-item>
-              <ion-icon name="car" item-start></ion-icon>
-              <ion-radio value="auto"></ion-radio>
-            </ion-item>
-          </ion-col>
+          <ion-segment-button value="bus"
+                              (ionSelect)="onSegmentSelected('bus')">
+            <ion-icon name="bus"></ion-icon>
+          </ion-segment-button>
 
-          <!-- <ion-col>
-            <ion-item>
-              <ion-icon name="bus" item-start></ion-icon>
-              <ion-radio value="micro"></ion-radio>
-            </ion-item>
-          </ion-col>
+          <ion-segment-button value="metro"
+                              (ionSelect)="onSegmentSelected('metro')">
+            <ion-icon name="subway"></ion-icon>
+          </ion-segment-button>
 
-          <ion-col>
-            <ion-item>
-              <ion-icon name="subway" item-start></ion-icon>
-              <ion-radio value="metro"></ion-radio>
-            </ion-item>
-          </ion-col>
+          <ion-segment-button value="caminar"
+                              (ionSelect)="onSegmentSelected('caminar')">
+            <ion-icon name="walk"></ion-icon>
+          </ion-segment-button>
 
-          <ion-col>
-            <ion-item>
-              <ion-icon name="walk" item-start></ion-icon>
-              <ion-radio value="caminar"></ion-radio>
-            </ion-item>
-          </ion-col> -->
-
-        </ion-list>
-
-      </ion-row>
-    </ion-grid>
+        </ion-segment>
 
   </ion-toolbar>
 </ion-footer>

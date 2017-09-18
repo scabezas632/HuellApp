@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the CrearUsuarioPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { LoginPage } from '../../pages/index.paginas';
 
 @IonicPage()
 @Component({
@@ -20,6 +15,10 @@ export class CrearUsuarioPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CrearUsuarioPage');
+  }
+
+  login(){
+    this.navCtrl.push(LoginPage);
   }
 
 }
