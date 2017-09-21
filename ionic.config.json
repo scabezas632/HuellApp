@@ -1,6 +1,6 @@
 {
   "name": "HuellApp",
-  "app_id": "",
+  "app_id": "d9837df0",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

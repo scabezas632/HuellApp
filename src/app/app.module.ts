@@ -5,12 +5,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
+
+// PAGES
 import { CrearUsuarioPage,
          LoginPage,
          HomePage,
          PerfilPage,
          HistorialPage,
          ResultadosPage} from '../pages/index.paginas';
+
+// MAPA
+import { Geolocation } from '@ionic-native/geolocation';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 @NgModule({
   declarations: [
@@ -39,6 +45,8 @@ import { CrearUsuarioPage,
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
