@@ -3,7 +3,7 @@ import { NavController, ToastController, AlertController } from 'ionic-angular';
 import 'rxjs/add/operator/filter';
 
 // PAGES
-import { PerfilPage, ViajePage, HistorialPage } from '../index.paginas';
+import { PerfilPage, ResultadosPage } from '../index.paginas';
 
 // Interfaces
 import { Coordenadas } from '../../interfaces/coordenadas.interface'
@@ -15,13 +15,14 @@ import { GoogleMaps, GoogleMap,
          CameraPosition, MarkerOptions,
          Marker } from '@ionic-native/google-maps';
 
-@Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
-})
-export class HomePage {
 
-  isPlay:boolean = false;
+@Component({
+  selector: 'page-viaje',
+  templateUrl: 'viaje.html',
+})
+export class ViajePage {
+
+  //CAMBIAR DESPUES SEGUN LO QUE PONGA EL USUARIO
   vehiculo: string = 'auto';
   urlImage:string = './assets/img/auto.png';
 
@@ -55,11 +56,10 @@ export class HomePage {
               public googleMaps: GoogleMaps,
               private toastCtrl: ToastController,
               private alertCtrl: AlertController) {
-
   }
 
-  ionViewDidLoad(){
-
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ViajePage');
   }
 
   ngAfterViewInit(){
@@ -156,6 +156,7 @@ export class HomePage {
     }
   }
 
+
   // Añadir marcador en el mapa
   createMarker(){
 
@@ -208,14 +209,13 @@ export class HomePage {
     this.navCtrl.push(PerfilPage);
   }
 
-  comenzar(){
-    this.navCtrl.push(ViajePage);
+  finalizarViaje(){
+    this.navCtrl.push(ResultadosPage)
+        .then(() => {
+          const index = this.navCtrl.getActive().index;
+          this.navCtrl.remove(1, index);
+        });
   }
-
-  verHistorial(){
-    this.navCtrl.push(HistorialPage);
-  }
-
 
   presentToast(mensaje:any) {
     let toast = this.toastCtrl.create({
@@ -253,7 +253,5 @@ export class HomePage {
     });
     alert.present();
   }
-
-
 
 }

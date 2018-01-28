@@ -86,4 +86,42 @@ export class PerfilPage {
     alert.present();
   }
 
+
+  alertaCambiarPassword() {
+    let alert = this.alertCtrl.create({
+      title: "Cambiar Contraseña",
+      inputs: [
+        {
+          name: "PasswordActual",
+          placeholder: "Ingrese su contraseña actual"
+        },
+        {
+          name: "Password",
+          placeholder: "Ingrese una nueva contraseña"
+        },
+        {
+          name: " RepetirPassword",
+          placeholder: "Repita su nueva contraseña"
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Guardar',
+          handler: data => {
+            //PONER CODIGO DE GUARDADO
+
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
 }

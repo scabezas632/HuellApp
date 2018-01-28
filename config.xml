@@ -3,7 +3,7 @@
     <name>HuellApp</name>
     <description>Medidor de Huella de Carbono</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">HuellApp Team</author>
-    <content original-src="index.html" src="http://192.168.0.28:8101" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-intent href="http://*/*" />

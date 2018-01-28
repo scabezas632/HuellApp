@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton>
     <ion-title>
       HuellApp
     </ion-title>
@@ -15,60 +15,124 @@
 
 <ion-content>
 
+  <ion-card color="primary" style="height:50%">
+    <ion-card-header>
+      Estado Actual
+    </ion-card-header>
+    <ion-card-content>
+
+      <!-- VELOCIMETRO CON MEDIDAS -->
+
+      <!-- BOTON VER HISTORIAL -->
+      <button ion-button small
+                (click)="verHistorial()">
+        VER HISTORIAL
+      </button>
+
+      <!-- DESCRIPCION POR VEHICULO -->
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <ion-icon name="bicycle"></ion-icon>
+          </ion-row>
+          <ion-row>
+            KM:
+          </ion-row>
+          <ion-row>
+            T:
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-icon name="car"></ion-icon>
+          </ion-row>
+          <ion-row>
+            KM:
+          </ion-row>
+          <ion-row>
+            T:
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-icon name="bus"></ion-icon>
+          </ion-row>
+          <ion-row>
+            KM:
+          </ion-row>
+          <ion-row>
+            T:
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-icon name="subway"></ion-icon>
+          </ion-row>
+          <ion-row>
+            KM:
+          </ion-row>
+          <ion-row>
+            T:
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-icon name="walk"></ion-icon>
+          </ion-row>
+          <ion-row>
+            KM:
+          </ion-row>
+          <ion-row>
+            T:
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
   <!-- MOSTRAR MAPA -->
-  <div #map id="map" style="height:100%"></div>
+  <div #map id="map" style="height:50%"></div>
   <!-- <div #map id="map"></div> -->
-
-  <!-- MOSTRAR BOTONES -->
-  <ion-fab bottom center *ngIf="!isPlay">
-    <button ion-fab color="secondary-dark"
-            (click)="comenzar()">
-      <ion-icon name="play"></ion-icon>
-    </button>
-  </ion-fab>
-
-  <ion-fab bottom center *ngIf="isPlay">
-    <button ion-fab color="danger"
-            (click)="comenzar()">
-      <ion-icon name="square"></ion-icon>
-    </button>
-  </ion-fab>
 
 </ion-content>
 
 
 <!-- BOTONES VEHICULOS -->
 <ion-footer>
-  <ion-toolbar>
 
-        <ion-segment [(ngModel)]="vehiculo" color="secondary-dark">
+  <ion-segment [(ngModel)]="vehiculo" color="secondary-dark">
 
-          <ion-segment-button value="bici"
-                              (ionSelect)="onSegmentSelected('bici')">
-            <ion-icon name="bicycle"></ion-icon>
-          </ion-segment-button>
+    <ion-segment-button value="bici"
+                        (ionSelect)="onSegmentSelected('bici')">
+      <ion-icon name="bicycle"></ion-icon>
+    </ion-segment-button>
 
-          <ion-segment-button value="auto"
-                              (ionSelect)="onSegmentSelected('auto')">
-            <ion-icon name="car"></ion-icon>
-          </ion-segment-button>
+    <ion-segment-button value="auto"
+                        (ionSelect)="onSegmentSelected('auto')">
+      <ion-icon name="car"></ion-icon>
+    </ion-segment-button>
 
-          <ion-segment-button value="bus"
-                              (ionSelect)="onSegmentSelected('bus')">
-            <ion-icon name="bus"></ion-icon>
-          </ion-segment-button>
+    <ion-segment-button value="bus"
+                        (ionSelect)="onSegmentSelected('bus')">
+      <ion-icon name="bus"></ion-icon>
+    </ion-segment-button>
 
-          <ion-segment-button value="metro"
-                              (ionSelect)="onSegmentSelected('metro')">
-            <ion-icon name="subway"></ion-icon>
-          </ion-segment-button>
+    <ion-segment-button value="metro"
+                        (ionSelect)="onSegmentSelected('metro')">
+      <ion-icon name="subway"></ion-icon>
+    </ion-segment-button>
 
-          <ion-segment-button value="caminar"
-                              (ionSelect)="onSegmentSelected('caminar')">
-            <ion-icon name="walk"></ion-icon>
-          </ion-segment-button>
+    <ion-segment-button value="caminar"
+                        (ionSelect)="onSegmentSelected('caminar')">
+      <ion-icon name="walk"></ion-icon>
+    </ion-segment-button>
 
-        </ion-segment>
+  </ion-segment>
 
-  </ion-toolbar>
+  <button ion-button
+            block
+            color="secondary-dark"
+            (click)="comenzar()">
+    COMENZAR VIAJE
+  </button>
 </ion-footer>

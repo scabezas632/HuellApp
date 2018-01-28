@@ -12,7 +12,8 @@ import { CrearUsuarioPage,
          HomePage,
          PerfilPage,
          HistorialPage,
-         ResultadosPage} from '../pages/index.paginas';
+         ResultadosPage,
+         ViajePage} from '../pages/index.paginas';
 
 // MAPA
 import { Geolocation } from '@ionic-native/geolocation';
@@ -26,7 +27,8 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     HomePage,
     PerfilPage,
     HistorialPage,
-    ResultadosPage
+    ResultadosPage,
+    ViajePage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     HomePage,
     PerfilPage,
     HistorialPage,
-    ResultadosPage
+    ResultadosPage,
+    ViajePage
   ],
   providers: [
     StatusBar,

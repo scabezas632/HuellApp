@@ -9,7 +9,9 @@
 
 <ion-content padding>
 
-  <div class="padding-top-first">
+<img src="assets/img/logo.png" class="center-logo">
+
+  <!-- <div class="padding-top-first">
     <button ion-button
             round block
             color="facebook">
@@ -31,15 +33,28 @@
             color="twitter">
       Iniciar Sesión con Twitter
     </button>
-  </div>
+  </div> -->
 
 
   <div class="padding-top">
     <ion-card color="gray-light">
-      <ion-card-header>
-        O inicia sesión con HuellApp
-      </ion-card-header>
       <ion-card-content>
+        <p class="center-text">Inicia sesión en una red social</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <img src="assets/img/facebook.png" class="center-rrss" ng-click="login()">
+            </ion-col>
+            <ion-col>
+              <img src="assets/img/twitter.png" class="center-rrss" ng-click="login()">
+            </ion-col>
+            <ion-col>
+              <img src="assets/img/google.png" class="center-rrss" ng-click="login()">
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <p class="center-text">O inicia sesión con HuellApp</p>
         <form>
           <ion-list>
 

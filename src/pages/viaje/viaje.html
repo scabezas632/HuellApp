@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>
+      HuellApp
+    </ion-title>
+<!--
+    <ion-buttons end>
+      <button ion-button icon-only (click)="settings()">
+        <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-segment [(ngModel)]="vehiculo" color="secondary-dark">
+
+    <ion-segment-button value="bici"
+                        (ionSelect)="onSegmentSelected('bici')">
+      <ion-icon name="bicycle"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="auto"
+                        (ionSelect)="onSegmentSelected('auto')">
+      <ion-icon name="car"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="bus"
+                        (ionSelect)="onSegmentSelected('bus')">
+      <ion-icon name="bus"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="metro"
+                        (ionSelect)="onSegmentSelected('metro')">
+      <ion-icon name="subway"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="caminar"
+                        (ionSelect)="onSegmentSelected('caminar')">
+      <ion-icon name="walk"></ion-icon>
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <!-- MOSTRAR MAPA -->
+  <div #map id="map" style="height:100%"></div>
+  <!-- <div #map id="map"></div> -->
+
+</ion-content>
+
+
+<!-- BOTONES VEHICULOS -->
+<ion-footer>
+
+  <button ion-button
+            block
+            color="danger"
+            (click)="finalizarViaje()">
+    TERMINAR VIAJE
+  </button>
+
+</ion-footer>

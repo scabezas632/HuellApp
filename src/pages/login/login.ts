@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 import { CrearUsuarioPage, HomePage } from '../../pages/index.paginas';
 
@@ -11,12 +11,13 @@ import { CrearUsuarioPage, HomePage } from '../../pages/index.paginas';
 export class LoginPage {
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
-    
+
   }
 
   registro(){
@@ -24,7 +25,12 @@ export class LoginPage {
   }
 
   login(){
-    this.navCtrl.push(HomePage);
+    // Pasar a la siguente pantalla y eliminar el login de la cola
+    this.navCtrl.push(HomePage)
+        .then(() => {
+          const index = this.navCtrl.getActive().index;
+          this.navCtrl.remove(0, index);
+        });
   }
 
 }

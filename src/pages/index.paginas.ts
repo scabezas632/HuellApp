@@ -4,3 +4,4 @@ export { HomePage } from './home/home';
 export { PerfilPage } from './perfil/perfil';
 export { ResultadosPage } from './resultados/resultados';
 export { HistorialPage } from './historial/historial';
+export { ViajePage } from './viaje/viaje';
